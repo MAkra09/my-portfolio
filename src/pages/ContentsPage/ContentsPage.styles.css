@@ -1,0 +1,214 @@
+/**
+ * ContentsPage Styles
+ * Page Object Model - Table of Contents Page
+ */
+
+/* ============================================
+   Container
+   ============================================ */
+
+.contents-page {
+  min-height: 100vh;
+  background: var(--color-background);
+  padding: 0;
+}
+
+.contents-page__card {
+  min-height: 100vh;
+  border: 1px solid #d8d5cf;
+  border-radius: var(--radius-md);
+  background: #ebe9e6;
+  overflow: hidden;
+}
+
+/* ============================================
+   Top Bar
+   ============================================ */
+
+.contents-page__topbar {
+  height: 40px;
+  border-bottom: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px 0 82px;
+  color: #151515;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contents-page__label,
+.contents-page__date {
+  font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* ============================================
+   Grid Layout
+   ============================================ */
+
+.contents-page__grid {
+  min-height: calc(100vh - 40px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contents-page__left,
+.contents-page__right {
+  background: #e6e4e1;
+}
+
+/* Left - Title */
+.contents-page__left {
+  border-right: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.contents-page__title {
+  font-family: var(--font-primary);
+  font-size: clamp(3.2rem, 6vw, 6.2rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #0d0d0d;
+  text-align: center;
+}
+
+/* Right - List */
+.contents-page__right {
+  padding: 86px 72px 72px 94px;
+}
+
+/* ============================================
+   Contents List
+   ============================================ */
+
+.contents-page__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(42px, 5.5vh, 74px);
+  margin: 0;
+  padding: 0;
+}
+
+.contents-page__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  column-gap: 22px;
+  min-height: 62px;
+}
+
+/* Dot indicator */
+.contents-page__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  justify-self: center;
+}
+
+.contents-page__dot--red {
+  background: var(--color-dot-red);
+}
+
+.contents-page__dot--mint {
+  background: var(--color-dot-mint);
+}
+
+.contents-page__dot--black {
+  background: var(--color-dot-black);
+}
+
+/* Item text */
+.contents-page__item-text {
+  font-size: clamp(1.35rem, 1.95vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #121212;
+}
+
+/* ============================================
+   Responsive - Tablet
+   ============================================ */
+
+@media (max-width: 980px) {
+  .contents-page__card {
+    border-radius: 0;
+  }
+
+  .contents-page__topbar {
+    padding: 0 20px;
+  }
+
+  .contents-page__grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contents-page__left {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line);
+    min-height: 34vh;
+  }
+
+  .contents-page__right {
+    padding: 34px 24px 42px;
+  }
+
+  .contents-page__list {
+    gap: 22px;
+  }
+
+  .contents-page__item {
+    grid-template-columns: 22px 1fr;
+    column-gap: 12px;
+    min-height: 46px;
+  }
+}
+
+/* ============================================
+   Responsive - Mobile
+   ============================================ */
+
+@media (max-width: 560px) {
+  .contents-page__topbar {
+    height: 38px;
+    padding: 0 14px;
+  }
+
+  .contents-page__grid {
+    min-height: calc(100vh - 38px);
+  }
+
+  .contents-page__left {
+    min-height: 28vh;
+    padding: 20px 12px;
+  }
+
+  .contents-page__title {
+    font-size: 2.65rem;
+  }
+
+  .contents-page__right {
+    padding: 26px 14px 28px;
+  }
+
+  .contents-page__item {
+    grid-template-columns: 18px 1fr;
+    column-gap: 10px;
+  }
+
+  .contents-page__dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .contents-page__item-text {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,72 @@
+/**
+ * Global Styles
+ * Base styles, CSS variables, and reset
+ */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --color-ink: #161616;
+  --color-line: #666666;
+  --color-panel-left: #e1dfdd;
+  --color-panel-right: #f3f0e5;
+  --color-paper-red: #e73731;
+  --color-background: #eceae4;
+  
+  /* Dot Colors */
+  --color-dot-red: #f01712;
+  --color-dot-mint: #9fc8c7;
+  --color-dot-black: #000000;
+  
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Special Elite', 'Courier New', monospace;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+}
+
+/* Base Styles */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  color: var(--color-ink);
+  background: var(--color-background);
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+/* App Container */
+.portfolio-app {
+  width: 100%;
+}
+
+/* Screen Card Base */
+.screen-card {
+  scroll-margin-top: 0;
+}
