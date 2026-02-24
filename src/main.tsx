@@ -12,6 +12,7 @@ import './styles/global.css';
 // Page styles (POM)
 import './pages/CoverPage/CoverPage.styles.css';
 import './pages/ContentsPage/ContentsPage.styles.css';
+import './pages/AboutPage/AboutPage.styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

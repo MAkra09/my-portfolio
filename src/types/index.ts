@@ -48,6 +48,21 @@ export interface ContentsPageProps {
 }
 
 // ============================================
+// About Page Types
+// ============================================
+
+export interface AboutPageProps {
+  dateLabel?: string;
+  dateTime?: string;
+  fullName?: string;
+  address?: string;
+  email?: string;
+  phone?: string;
+  about?: string;
+  keywords?: string[];
+}
+
+// ============================================
 // Common Types
 // ============================================
 
